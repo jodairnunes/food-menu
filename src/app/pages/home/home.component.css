@@ -1,0 +1,94 @@
+button{
+	z-index: 1;
+}
+
+.search {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+input {
+	width: 100%;
+	padding: 16px 24px;
+	border-radius: 8px;
+	font-weight: 600;
+	border: none;
+	outline: none;
+	margin-bottom: 32px;
+}
+
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}
+
+.container-card {
+	width: 100%;
+	height: 300px;
+	max-width: 260px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 16px;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .5);
+	padding: 10px 16px;
+	border-radius: 16px;
+	background-color: var(--bg-dois);
+}
+
+.container-img {
+	width: 120px; /* Defina o tamanho da div */
+	height: 120px;
+	overflow: hidden; /* Oculta o excesso da imagem se necessário */
+	border-radius: 50%;
+	background-color: white;
+	transition: .3s;
+  }
+
+  .container-img:hover{
+	transform: scale(1.12);
+	cursor: pointer;
+  }
+
+  .container-img img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover; /* Ajusta a imagem para preencher a div */
+	  padding: 5px;
+	  border-radius: 50%;
+	  position: relative;
+	}
+
+
+.container-banner {
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-banner img{
+	width: 100%;
+	height: 100%;
+	object-fit: center;
+}
+
+.container-banner::after {
+	content: 'THE BEST FOOD';
+	position: absolute;
+	color: var(--text-color);
+}
+

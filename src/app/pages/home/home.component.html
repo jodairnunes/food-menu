@@ -1,0 +1,19 @@
+
+<div class="container-banner">
+	<img src="assets/banner-food2.jpg" alt="">
+</div>
+
+<div class="search">
+	<input [(ngModel)]="searchQuery" placeholder="Buscar produto ..." />
+	<h2>Produtos</h2>
+</div>
+<div class="container">
+	<div class="container-card" *ngFor="let product of filteredProducts()">
+		<div class="container-img" (click)="goToDetails(product.id)">
+			<img [src]="product.imageUrl" alt="{{ product.name }}" />
+		</div>
+	  <h3>{{ product.name }}</h3>
+	  <h3>{{ product.price | currency: 'BRL' }}</h3>
+	  <button (click)="addToCart(product)">Adicionar ao Carrinho</button>
+	</div>
+</div>

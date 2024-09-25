@@ -1,0 +1,6 @@
+<header>
+	<span *ngIf="isHomePage" (click)="goBack()"></span>
+	<button *ngIf="!isHomePage" (click)="goBack()">Voltar</button>
+	<h2>FOOD MP</h2>
+	<button (click)="goToCart()">Carrinho ({{ cartCount }})</button>
+  </header>

@@ -1,0 +1,21 @@
+
+<div class="container">
+	<div *ngFor="let product of cart" class="container-card">
+		<div class="card-img">
+			<img [src]="product.imageUrl" alt="{{ product.name }}" />
+		</div>
+		<div class="card-content">
+			<h2>{{ product.name }}</h2>
+			<p class="description">{{ product.description }}</p>
+		</div>
+		<p class="price">{{ product.price | currency: 'BRL' }}</p>
+	</div>
+	
+	
+	<div class="price-total">
+		<p class="price-total-text">Total: </p>
+		<p class="price-total-valor">{{ getTotal() | currency: 'BRL' }}</p>
+	</div>
+	<button (click)="finalizeOrder()">Finalizar Pedido</button>
+
+</div>
